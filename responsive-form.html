@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Code Review Newsletter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="flex-wrapper">
+            <header>
+                <div class="header-wrapper">
+                    <h1>The Code Review</h1>
+                </div>
+            </header>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+            <form>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                        <label for="full-name">Full Name</label>
+                        <input type="text" name="full-name">
+
+                        <label for="email-address">Email Address</label>
+                        <input type="email" name="email-address">
+
+                        <label for="phone-number">Phone Number</label>
+                        <input type="text" name="phone-number">
+                        
+                        <label for="street-address">Street Address</label>
+                        <input type="text" name="street-address">
+
+
+
+                        <label for="city">City</label>
+                        <input type="text" name="city">
+
+                        <label for="zip-code">Zip Code</label>
+                        <input type="text" name="zip-code">
+                </fieldset>
+                <!-- <hr> -->
+                <fieldset>
+                    <legend>Newsletter</legend>
+                        <p>Select the Newsletter you would like to receive.</p>  
+                        <input type="checkbox" name="html-news" value="HTML News" checked>
+                        <label for="html-news">HTML News</label>
+
+                        <input type="checkbox" name="css-news" value="CSS News">
+                        <label for="css-news">CSS News</label>
+                       
+                        <input type="checkbox" name="javascript-news" value="JavaScript News">
+                        <label for="javascript-news">JavaScript News</label>
+
+                        <p>Newsletter Format</p>
+                        <input type="radio" name="html" value="html" checked>
+                        <label for="html">HTML</label>
+
+                        <input type="radio" name="plain-text" value="plain-text">
+                        <label for="plain-text">Plain Text</label>
+
+                        <label for="other-topics">Other topics you would like to hear about:</label>
+
+                        <textarea name="other-topics" rows="5" cols="33">
+
+                        </textarea>
+
+                </fieldset>
+            </form>
+        </div>
+        <!-- flex-wrapper div -->     
+        <footer>
+            <p id="copyright"> Copyright The Code Review</p>        
+        </footer>    
+    </body>
+</html>
+
