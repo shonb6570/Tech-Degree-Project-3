@@ -22,6 +22,11 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+            <div class="container">
+                <h1>Signup for our newsletter</h1>
+                <p>Get the latest news on how your code is doing right in your inbox.</p>
+            </div>
+            <hr>
             <form>
                 <fieldset>
                     <legend>Contact Information</legend>
@@ -45,31 +50,35 @@
                         <label for="zip-code">Zip Code</label>
                         <input type="text" name="zip-code">
                 </fieldset>
-                <!-- <hr> -->
+                <hr>
                 <fieldset>
                     <legend>Newsletter</legend>
-                        <p>Select the Newsletter you would like to receive.</p>  
-                        <input type="checkbox" name="html-news" value="HTML News" checked>
-                        <label for="html-news">HTML News</label>
+                        <div class="newsletter">
+                            <p>Select the Newsletter you would like to receive.</p>  
+                            <input type="checkbox" name="html-news" value="HTML News" checked>
+                            <label for="html-news">HTML News</label>
 
-                        <input type="checkbox" name="css-news" value="CSS News">
-                        <label for="css-news">CSS News</label>
-                       
-                        <input type="checkbox" name="javascript-news" value="JavaScript News">
-                        <label for="javascript-news">JavaScript News</label>
+                            <input type="checkbox" name="css-news" value="CSS News">
+                            <label for="css-news">CSS News</label>
+                        
+                            <input type="checkbox" name="javascript-news" value="JavaScript News">
+                            <label for="javascript-news">JavaScript News</label>
+                        </div>
 
                         <p>Newsletter Format</p>
-                        <input type="radio" name="html" value="html" checked>
-                        <label for="html">HTML</label>
 
-                        <input type="radio" name="plain-text" value="plain-text">
-                        <label for="plain-text">Plain Text</label>
+                        <div class="newsletter-format">
+                            <input type="radio" name="html" value="html" checked>
+                            <label for="html">HTML</label>
 
-                        <label for="other-topics">Other topics you would like to hear about:</label>
+                            <input type="radio" name="plain-text" value="plain-text">
+                            <label for="plain-text">Plain Text</label>
 
-                        <textarea name="other-topics" rows="5" cols="33">
+                            <label for="other-topics">Other topics you would like to hear about:</label>
 
-                        </textarea>
+                            <textarea name="other-topics" maxlength="400">   
+                            </textarea>
+                        </div>
 
                 </fieldset>
             </form>
