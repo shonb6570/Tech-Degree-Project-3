@@ -29,8 +29,6 @@ body {
     margin: 0;
 }
 
-/* link Styles ------*/
-
 /* Flexbox ------*/
 .flex-wrapper {
     display: flex;
@@ -42,11 +40,8 @@ body {
 
 .newsletter,
 .newsletter-format {
-    display: flex;
     width: 100%;
-    margin: 0 auto;
     text-align: left;
-    flex-direction: column;
 }
 
 /* Header Styles ------*/
@@ -71,24 +66,49 @@ body {
         border: none;     
     }
 
+    fieldset p {
+        font-size: 14pt;
+        font-weight: 400;
+    }
+
+    legend {
+        font-size: 20pt;
+        font-weight: bolder;
+    }
+
     input[type=text],
     input[type=email] {
         height: 50px;
     }
 
-    input[type=checkbox] {
-
-    }
+    /* credit to dota2pro on stackoverflow -> :focus outline radius fix: https://stackoverflow.com/questions/5394116/outline-radius */
+    input:focus,
+    textarea:focus {
+        outline: none;
+        box-shadow: 0 0 0 2pt rgb(0, 63, 105);
+      }
 
     label {
         padding: 10px 0;
-        display: inline-block;
+        white-space: nowrap;
     }
+
     textarea {
        height: 10em; 
        font-size: 12pt;
     }
 
+    .option,
+    .text-box {
+        padding: 10px 0;
+    }
+
+    .text-box label {
+        display: flex;
+        padding: 20px 0;
+    }
+
+    
 /* DRY Coding ------*/
 
 input[attr=name] {
