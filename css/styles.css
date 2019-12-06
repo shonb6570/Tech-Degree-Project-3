@@ -30,6 +30,7 @@ body {
 }
 
 /* Flexbox ------*/
+
 .flex-wrapper {
     display: flex;
     flex-direction: column;
@@ -45,70 +46,179 @@ body {
 }
 
 /* Header Styles ------*/
-    .header-wrapper {
-        display: flex;
-        background-color: rgb(44, 44, 44);
-        width: 100%;
-        height: 60px;
-        margin: 0 auto;
-        justify-content: center;
-        color: white;
-    }
+
+.header-wrapper {
+    display: flex;
+    background-color: rgb(29, 52, 68);
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    justify-content: center;
+    color: white;
+}
 
 /* Form Styles ------*/
 
-    fieldset {
-        display: flex;
-        flex: 1;
-        margin-inline-start: 0;
-        margin-inline-end: 0;
-        padding: 20px;
-        border: none;     
+fieldset {
+    display: flex;
+    flex: 1;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding: 20px;
+    border: none;     
+}
+
+fieldset p {
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+legend {
+    font-size: 20pt;
+    font-weight: bolder;
+}
+
+input[type=text],
+input[type=email] {
+    height: 50px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  margin-right: 10px;
+  transition: 400ms ease-out;
+}
+
+
+/* radio button styles -  credit: Wilder Taype - https://codepen.io/wilder_taype/pen/pNXwMW/*/
+
+*{font-family: 'Roboto', sans-serif;}
+
+@keyframes click-wave {
+  0% {
+    height: 20px;
+    width: 20px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+/* credit to dota2pro on stackoverflow -> :focus outline radius fix: https://stackoverflow.com/questions/5394116/outline-radius */
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2pt rgb(29, 52, 68);
     }
 
-    fieldset p {
-        font-size: 14pt;
-        font-weight: 400;
-    }
+label {
+    padding: 10px 0;
+    white-space: nowrap;
+}
 
-    legend {
-        font-size: 20pt;
-        font-weight: bolder;
-    }
+textarea {
+    height: 10em; 
+    font-size: 12pt;
+}
 
-    input[type=text],
-    input[type=email] {
-        height: 50px;
-    }
+.option,
+.text-box {
+    padding: 10px 0;
+}
 
-    /* credit to dota2pro on stackoverflow -> :focus outline radius fix: https://stackoverflow.com/questions/5394116/outline-radius */
-    input:focus,
-    textarea:focus {
-        outline: none;
-        box-shadow: 0 0 0 2pt rgb(0, 63, 105);
-      }
+.text-box label {
+    display: flex;
+    padding: 20px 0;
+}
 
-    label {
-        padding: 10px 0;
-        white-space: nowrap;
-    }
+button {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(3, 196, 196);
+    color: rgb(236, 234, 234);
+    border-radius: 6px;
+    font-size: 24px;
+    padding: 5px 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+}
 
-    textarea {
-       height: 10em; 
-       font-size: 12pt;
-    }
+button:hover,
+button:focus {
+color: #999;
+}
 
-    .option,
-    .text-box {
-        padding: 10px 0;
-    }
+button:active {
+  background-color: rgb(2, 221, 221);
+  color: rgb(117, 117, 117);
+}
 
-    .text-box label {
-        display: flex;
-        padding: 20px 0;
-    }
 
-    
+
 /* DRY Coding ------*/
 
 input[attr=name] {
@@ -120,7 +230,7 @@ input[type=text],
 input[type=email] {
     background-color: rgb(221, 219, 219);
     border: 2px;
-    border-radius: 4px;
+    border-radius: 6px;
     width: 100%;
     padding: 0 10px;
 }
