@@ -7,22 +7,60 @@
 
 /* Basic Styles ------*/
 
+label,
+button,
+p,
+h1,
+legend,
+input::placeholder,
+select  {
+    font-family: 'Merriweather', serif;
+}
+
+.header-wrapper h1{
+    margin: 10px 0;
+}
+
+.container p {
+    margin-bottom: 5px 0;
+}
+
+label,
+p {
+    font-size: 16pt;
+    color: rgb(88, 88, 88);
+}
+
+.container p {
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
 .container>*,
 #copyright {
     text-align: center;
+}
+
+.container {
+    padding: 20px 0;
 }
 
 :root {
     background:rgb(245, 245, 245);
   }
 #copyright {
-    font-size: 10px;
+    font-size: 18px;
     font-weight: 100;
+    margin: 20px 0 80px 0;
 }
 
 hr {
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    width: 90%;
+    border: 3px solid;
+    border-bottom: 1px solid; 
+    padding-bottom: 2px;
+    margin-bottom: 20px;
 }
 
 body {
@@ -38,6 +76,7 @@ body {
     height: 100%;
     padding: 0 2%;
 }
+
 
 .newsletter,
 .newsletter-format {
@@ -68,25 +107,68 @@ fieldset {
     border: none;     
 }
 
-fieldset p {
-    font-size: 14pt;
-    font-weight: 400;
-}
-
 legend {
     font-size: 20pt;
     font-weight: bolder;
 }
 
+/* Select arrow styling credit - NICK MEAGHER https://byprimer.co/blog/style-select-fields-using-css/ */
+select {
+	padding: 20px;
+    font-size: 16px;
+    color: rgb(158, 158, 158);
+
+	/* select reset */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	 -o-appearance: none;
+		appearance: none;
+}
+
+.select-wrapper {
+	position: relative;	
+}
+
+.select-wrapper:after {
+  	content: " \21F3";
+  	font-size: 40px;
+  	position: absolute;
+  	top: 10px;
+  	right: 22px;
+  	color: rgb(99, 98, 98);
+  	pointer-events: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea,
 input[type=text],
 input[type=email] {
-    height: 50px;
+    padding: 0 10px;
 }
+
+input[type=text],
+input[type=email],
+select {
+    height: 70px;
+}
+
 
 input[type=checkbox],
 input[type=radio] {
-  margin-right: 10px;
+  margin: 0 10px 10px 0;
   transition: 400ms ease-out;
+}
+
+input[type=email]::placeholder,
+input[name=full-name]::placeholder {
+    color: rgb(158, 158, 158);
+    text-align: end;
+    padding-right: 20px;
+    font-size: 16px;
 }
 
 
@@ -167,10 +249,11 @@ input[type=radio] {
   border-radius: 50%;
 }
 
-/* credit to dota2pro on stackoverflow -> :focus outline radius fix: https://stackoverflow.com/questions/5394116/outline-radius */
+/* :focus outline radius fix - credit to dota2pro - https://stackoverflow.com/questions/5394116/outline-radius */
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
     outline: none;
     box-shadow: 0 0 0 2pt rgb(29, 52, 68);
     }
@@ -183,6 +266,7 @@ label {
 textarea {
     height: 10em; 
     font-size: 12pt;
+    margin-bottom: 20px;
 }
 
 .option,
@@ -194,6 +278,8 @@ textarea {
     display: flex;
     padding: 20px 0;
 }
+
+/* button styles */
 
 button {
     width: 100%;
@@ -226,18 +312,14 @@ input[attr=name] {
 }
 
 textarea,
+select,
 input[type=text],
 input[type=email] {
     background-color: rgb(221, 219, 219);
     border: 2px;
     border-radius: 6px;
     width: 100%;
-    padding: 0 10px;
 }
-
-
-/* Footer ------*/
-
 
 
 /* Media Queries ------*/
