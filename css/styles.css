@@ -364,6 +364,10 @@ input[type=email] {
     #zip-code {
         max-width: 40%;
     }
+
+    .container {
+        white-space: nowrap;
+    }
  
 }
 
