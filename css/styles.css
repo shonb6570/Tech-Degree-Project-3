@@ -130,12 +130,14 @@ select {
 
 textarea,
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=tel]  {
     padding: 0 .625em;
 }
 
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=tel] {
     height: 4em;
 }
 
@@ -193,7 +195,8 @@ textarea{
 
 textarea:focus, 
 input[type=text]:focus,
-input[type=email]:focus {
+input[type=email]:focus,
+input[type=tel]:focus {
     color: #5c5c5c;
 }
 
@@ -322,7 +325,8 @@ input[attr=name] {
 textarea,
 select,
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=tel] {
     background-color: rgb(221, 219, 219);
     border: .125em;
     border-radius: .375em;
@@ -331,6 +335,7 @@ input[type=email] {
 textarea,
 input[type=text],
 input[type=email],
+input[type=tel],
 .header-wrapper,
 button,
 .newsletter,
