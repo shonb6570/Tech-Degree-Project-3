@@ -351,6 +351,13 @@ legend {
     padding: 1.25em 0;
 }
 
+.container, 
+.top-form-div,
+.newsletter,
+.newsletter-format  {
+    flex-direction: column;
+}
+
 /* Media Queries ------*/
 
 @media screen and (min-width: 768px) {
@@ -398,6 +405,13 @@ legend {
 
     .container {
         white-space: nowrap;
+    }
+
+    .container, 
+    .top-form-div,
+    .newsletter,
+    .newsletter-format  {
+        flex-direction: column;
     }
  
 }
