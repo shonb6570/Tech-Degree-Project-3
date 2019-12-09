@@ -4,9 +4,6 @@
 
 /* Web Fonts ------*/
 
-
-/* Basic Styles ------*/
-
 label,
 button,
 p,
@@ -17,8 +14,11 @@ select  {
     font-family: 'Merriweather', serif;
 }
 
+
+/* Basic Styles ------*/
+
 .header-wrapper h1{
-    margin: 30px;
+    margin: 1.875em;
     text-transform: uppercase;
 }
 
@@ -27,7 +27,9 @@ h1 {
 }
 
 .container p {
-    margin-bottom: 5px;
+    margin-bottom: .3125em;
+    margin: 1em 0;
+    padding: 0 1.25em;
 }
 
 label,
@@ -36,121 +38,111 @@ p {
     color: rgb(88, 88, 88);
 }
 
-.container p {
-    margin: 10px 0;
-    padding: 0 20px;
-}
-
-.container>*,
-#copyright {
-    text-align: center;
-}
-
-.container {
-    padding: 20px 0;
-}
-
 :root {
     background:rgb(245, 245, 245);
   }
-#copyright {
-    font-size: 18px;
-    font-weight: 100;
-    margin: 20px 0 200px 0;
-}
 
-#line1 {
-    display: flex;
-    width: 90%;
-    border-top: 8px double;
-    padding-bottom: 2px;
-    margin-bottom: 20px;
-}
-
-#line2 {
-    width: 90%;
-    border: 2px solid;
-    margin-bottom: 20px;
-}
 
 body {
-    margin: 0;
+    margin: 0 auto;
 }
 
 /* Flexbox ------*/
 
-.flex-wrapper {
+.flex-wrapper,
+.flex-row,
+.text-box label,
+.header-wrapper,
+fieldset,
+#line1 {
     display: flex;
+}
+
+
+.flex-wrapper {
     flex-direction: column;
-    min-width: 380px;
+    min-width: 18.75em;
     height: 100%;
     padding: 0 2%;
 }
 
 .flex-row {
-    display: flex;
     flex-direction: column;
 }
 
 .newsletter,
 .newsletter-format {
-    width: 100%;
     text-align: left;
 }
 
 .newsletter {
-    padding-bottom: 20px;
+    padding-bottom: 1.25em;
 }
 
 /* Header Styles ------*/
 
 .header-wrapper {
-    display: flex;
     background-color: rgb(29, 52, 68);
-    width: 100%;
-    height: 100px;
-    margin: 0 auto;
+    height: 6.25em;
     justify-content: center;
     color: white;
 }
 
 /* Form Styles ------*/
 
+.top-form-div {
+    padding-bottom: 2.5em;
+}
+
 fieldset {
-    display: flex;
     flex: 1;
-    padding: 20px;
     border: none;     
 }
 
 legend {
     font-size: 20pt;
     font-weight: bolder;
-    padding-top: 20px;
 }
 
 select {
-	padding: 20px 0;
-    font-size: 16px;
+    font-size: 1em;
+    height: 4em;
     color: rgb(158, 158, 158);
+}
+
+
+#copyright {
+    font-size: 1.125em;
+    font-weight: 100;
+    margin: 1.25em 0 12.5em 0;
+}
+
+#line1 {
+    width: 90%;
+    border-top: .5em double;
+    padding-bottom: .125em;
+}
+
+#line2 {
+    width: 90%;
+    border: .125em solid;
 }
 
 textarea,
 input[type=text],
 input[type=email] {
-    padding: 0 10px;
+    padding: 0 .625em;
 }
 
 input[type=text],
-input[type=email],
-select {
-    height: 70px;
+input[type=email] {
+    height: 4em;
 }
 
 
 input[type=checkbox],
 input[type=radio] {
-  margin: 0 10px 10px 0;
+  margin: 0 .625em .625em 0;
   transition: 400ms ease-out;
 }
 
@@ -159,10 +151,51 @@ input[name=full-name]::placeholder {
     color: rgb(158, 158, 158);
     font-style: italic;
     text-align: end;
-    padding-right: 20px;
-    font-size: 16px;
+    padding-right: 1.25em;
+    font-size: 1em;
 }
 
+label {
+    white-space: nowrap;
+}
+
+textarea {
+    height: 10em; 
+    font-size: 12pt;
+}
+
+textarea,
+#line1,
+#line2 {
+    margin-bottom: 1.25em;
+}
+
+.option,
+.text-box {
+    padding: .625em 0;
+}
+
+#zip-code {
+    width: 50%;
+}
+
+input, 
+select, 
+textarea{
+    font-size: 14pt;
+}
+
+input,  
+textarea{
+    color: #1f1f1f;
+    font-size: 14pt;
+}
+
+textarea:focus, 
+input[type=text]:focus,
+input[type=email]:focus {
+    color: #5c5c5c;
+}
 
 /* radio button styles -  credit: Wilder Taype - https://codepen.io/wilder_taype/pen/pNXwMW/*/
 
@@ -170,16 +203,16 @@ input[name=full-name]::placeholder {
 
 @keyframes click-wave {
   0% {
-    height: 20px;
-    width: 20px;
+    height: 1.25em;
+    width: 1.25em;
     opacity: 0.35;
     position: relative;
   }
   100% {
-    height: 200px;
-    width: 200px;
-    margin-left: -80px;
-    margin-top: -80px;
+    height: 12.5em;
+    width: 12.5em;
+    margin-left: -5em;
+    margin-top: -5em;
     opacity: 0;
   }
 }
@@ -191,12 +224,12 @@ input[name=full-name]::placeholder {
   -o-appearance: none;
   appearance: none;
   position: relative;
-  top: 13.33333px;
+  top: .83333125em;
   right: 0;
   bottom: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
+  height: 1.25em;
+  width: 1.25em;
   transition: all 0.15s ease-out 0s;
   background: #cbd1d8;
   border: none;
@@ -215,14 +248,14 @@ input[name=full-name]::placeholder {
   background: #40e0d0;
 }
 .option-input:checked::before {
-  height: 20px;
-  width: 20px;
+  height: 1.15em;
+  width: 1.5em;
   position: absolute;
   content: '✔';
   display: inline-block;
-  font-size: 12px;
+  font-size: .75em;
   text-align: center;
-  line-height: 20px;
+  line-height: 2em;
 }
 .option-input:checked::after {
   -webkit-animation: click-wave 0.65s;
@@ -250,37 +283,16 @@ select:focus {
     box-shadow: 0 0 0 2pt rgb(29, 52, 68);
     }
 
-label {
-    padding: 20px 0;
-    white-space: nowrap;
-}
-
-textarea {
-    height: 10em; 
-    font-size: 12pt;
-    margin-bottom: 20px;
-}
-
-.option,
-.text-box {
-    padding: 10px 0;
-}
-
-.text-box label {
-    display: flex;
-    padding: 20px 0;
-}
 
 /* button styles */
 
 button {
-    width: 100%;
-    height: 50px;
+    height: 3.125em;
     background-color: rgb(3, 196, 196);
     color: rgb(236, 234, 234);
-    border-radius: 6px;
-    font-size: 24px;
-    padding: 5px 10px;
+    border-radius: .375em;
+    font-size: 1.5em;
+    padding: .3125em .625em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     outline: none;
 }
@@ -296,11 +308,15 @@ button:active {
 }
 
 
-
 /* DRY Coding ------*/
 
+.container>*,
+#copyright {
+    text-align: center;
+}
+
 input[attr=name] {
-    padding-bottom: 20px;
+    padding-bottom: 1.25em;
 }
 
 textarea,
@@ -308,20 +324,27 @@ select,
 input[type=text],
 input[type=email] {
     background-color: rgb(221, 219, 219);
-    border: 2px;
-    border-radius: 6px;
+    border: .125em;
+    border-radius: .375em;
 }
 
 textarea,
 input[type=text],
-input[type=email] {
+input[type=email],
+.header-wrapper,
+button,
+.newsletter,
+.newsletter-format {
     width: 100%;
 }
 
-#zip-code {
-    width: 50%;
+select,
+.container,
+label,
+.text-box label,
+legend {
+    padding: 1.25em 0;
 }
-
 
 /* Media Queries ------*/
 
@@ -336,7 +359,7 @@ input[type=email] {
 
     .flex-row {
         flex-direction: row;
-        padding: 10px 0;
+        padding: .625em 0;
     }
 
     .flex-row input {
@@ -344,13 +367,16 @@ input[type=email] {
         flex-basis: 75%;
     }
 
+   #state {
+        flex-grow: 2;
+    }
+
     .flex-row label {
         flex-basis: 25%;
-        height: 50px;
+        height: 3.125em;
         margin: auto 0;
     }
       
-
     .header-wrapper {
         width: 100vw;
         margin: 0 auto;

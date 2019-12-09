@@ -29,7 +29,7 @@
                     </div>
                     <hr id="line1">
                     <form class="registration" action="index.html" method="post">
-                        <fieldset>
+                        <fieldset class="top-form-div">
                             <legend class="contact-information">Contact Information</legend>
                                     <div class="flex-row">
                                         <label for="full-name">Full Name</label>
@@ -59,7 +59,7 @@
                                     <div class="select-wrapper flex-row">
                                         <label for="state">State</label>
                                                 <select id="state" name="state">
-                                                    <option value="" selected="selected">Choose State</option>
+                                                    <option value="" selected>Choose State</option>
                                                     <option value="AL">Alabama</option>
                                                     <option value="AK">Alaska</option>
                                                     <option value="AZ">Arizona</option>
@@ -112,16 +112,16 @@
                                                     <option value="WI">Wisconsin</option>
                                                     <option value="WY">Wyoming</option>                      
                                                 </select>
-                                            <!-- end .select-wrapper div-->
                                         </div>
+                                        <!-- end .select-wrapper flex-row div-->
                                     
                                 <div class="flex-row">
                                     <label for="zip-code">Zip Code</label>
                                     <input type="text" id="zip-code" name="zip-code">
                                 </div>
                         </fieldset>   
-                
-                        <!-- end .contact-info div-->
+                        <!-- end .contact-information fieldset div-->
+
                             <hr id="line2">             
                             <fieldset class="newsletter">
                                 <legend>Newsletter</legend>
@@ -141,10 +141,6 @@
                                         <label for="javascript-news">JavaScript News</label>
                                     </div>
                             </fieldset>
-                        
-                            <!-- div for first half of form -->  
-                            
-
                        
                         <fieldset class="newsletter-format">
                                 <p>Newsletter Format</p>
@@ -170,7 +166,7 @@
                         </fieldset>
                 </form>
         </div>
-        <!-- flex-wrapper div -->     
+        <!-- end flex-wrapper div -->     
         <footer>
             <p id="copyright"> Copyright &nbsp;&nbsp; The Code Review</p>        
         </footer>    
